@@ -27,9 +27,9 @@
     - Sempre que o jogo terminar, perguntar se quer iniciar o jogo novamente.
 - [ ] Adicionar validações para jogadas inválidas.
     - Só permitir inserção de números.
-    - Só pode escolher posições de 1 a 9.
-    - Só pode inserir uma jogada em um número de posição que não estiver ocupada.
-    - Se houver um vencedor as jogadas terminam.
+    - Só pode escolher posições de 1 a 9 seguinte a numeração da linha e coluna conforme exibido no tabuleiro.
+    - Só pode inserir uma jogada em uma posição que não estiver ocupada.
+    - Se houver um vencedor ou empate as jogadas terminam.
 - [x] O jogo se encerra quando houver um ganhador ou empate.
     - o primeiro jogador que conseguir fechar uma posição de sequência de 3 ícones (X ou O) vence.
     - o empate acontece se todas as posições forem preenchidas e ninguém conseguir fechar a sequência de 3 posições conforme regras.
