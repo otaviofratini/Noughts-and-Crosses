@@ -10,9 +10,9 @@ void board(char cells[3][3]){
     printf("\t3   %c | %c | %c \n",cells[2][0],cells[2][1],cells[2][2]);
 }
 int main(){
-    char gameRows[3][3] = { {' ',' ',' '},
-                            {' ',' ',' '},
-                            {' ',' ',' '} };
+    char gameRows[3][3] = { {'1','2','3'},
+                            {'4','5','6'},
+                            {'7','8','9'} }; //Declaração da Matriz que representa as células do jogo da velha
     char answer;
     int count_play,l,c,x,y,turn = 0;
     do {
@@ -48,35 +48,36 @@ int main(){
                 turn++;
                 count_play++;
             }
-            if(gameRows[0][0] == 'X' && gameRows[0][1] == 'X' && gameRows[0][2] == 'X'){count_play = 11;};
-            if(gameRows[1][0] == 'X' && gameRows[1][1] == 'X' && gameRows[1][2] == 'X'){count_play = 11;};
-            if(gameRows[2][0] == 'X' && gameRows[2][1] == 'X' && gameRows[2][2] == 'X'){count_play = 11;};
-            if(gameRows[0][0] == 'X' && gameRows[1][0] == 'X' && gameRows[2][0] == 'X'){count_play = 11;};
-            if(gameRows[0][1] == 'X' && gameRows[1][1] == 'X' && gameRows[2][1] == 'X'){count_play = 11;};
-            if(gameRows[0][2] == 'X' && gameRows[1][2] == 'X' && gameRows[2][2] == 'X'){count_play = 11;};
-            if(gameRows[0][0] == 'X' && gameRows[1][1] == 'X' && gameRows[2][2] == 'X'){count_play = 11;};
-            if(gameRows[0][2] == 'X' && gameRows[1][1] == 'X' && gameRows[2][0] == 'X'){count_play = 11;};
-
-            if(gameRows[0][0] == 'O' && gameRows[0][1] == 'O' && gameRows[0][2] == 'O'){count_play = 12;};
-            if(gameRows[1][0] == 'O' && gameRows[1][1] == 'O' && gameRows[1][2] == 'O'){count_play = 12;};
-            if(gameRows[2][0] == 'O' && gameRows[2][1] == 'O' && gameRows[2][2] == 'O'){count_play = 12;};
-            if(gameRows[0][0] == 'O' && gameRows[1][0] == 'O' && gameRows[2][0] == 'O'){count_play = 12;};
-            if(gameRows[0][1] == 'O' && gameRows[1][1] == 'O' && gameRows[2][1] == 'O'){count_play = 12;};
-            if(gameRows[0][2] == 'O' && gameRows[1][2] == 'O' && gameRows[2][2] == 'O'){count_play = 12;};
-            if(gameRows[0][0] == 'O' && gameRows[1][1] == 'O' && gameRows[2][2] == 'O'){count_play = 12;};
-            if(gameRows[0][2] == 'O' && gameRows[1][1] == 'O' && gameRows[2][0] == 'O'){count_play = 12;};
+            // Condições para o Jogador X ganhar a rodada
+            if(gameRows[0][0] == 'X' && gameRows[0][1] == 'X' && gameRows[0][2] == 'X'){count_play = 20;};
+            if(gameRows[1][0] == 'X' && gameRows[1][1] == 'X' && gameRows[1][2] == 'X'){count_play = 20;};
+            if(gameRows[2][0] == 'X' && gameRows[2][1] == 'X' && gameRows[2][2] == 'X'){count_play = 20;};
+            if(gameRows[0][0] == 'X' && gameRows[1][0] == 'X' && gameRows[2][0] == 'X'){count_play = 20;};
+            if(gameRows[0][1] == 'X' && gameRows[1][1] == 'X' && gameRows[2][1] == 'X'){count_play = 20;};
+            if(gameRows[0][2] == 'X' && gameRows[1][2] == 'X' && gameRows[2][2] == 'X'){count_play = 20;};
+            if(gameRows[0][0] == 'X' && gameRows[1][1] == 'X' && gameRows[2][2] == 'X'){count_play = 20;};
+            if(gameRows[0][2] == 'X' && gameRows[1][1] == 'X' && gameRows[2][0] == 'X'){count_play = 20;};
+            // Condições para o Jogador O ganhar a rodada
+            if(gameRows[0][0] == 'O' && gameRows[0][1] == 'O' && gameRows[0][2] == 'O'){count_play = 22;};
+            if(gameRows[1][0] == 'O' && gameRows[1][1] == 'O' && gameRows[1][2] == 'O'){count_play = 22;};
+            if(gameRows[2][0] == 'O' && gameRows[2][1] == 'O' && gameRows[2][2] == 'O'){count_play = 22;};
+            if(gameRows[0][0] == 'O' && gameRows[1][0] == 'O' && gameRows[2][0] == 'O'){count_play = 22;};
+            if(gameRows[0][1] == 'O' && gameRows[1][1] == 'O' && gameRows[2][1] == 'O'){count_play = 22;};
+            if(gameRows[0][2] == 'O' && gameRows[1][2] == 'O' && gameRows[2][2] == 'O'){count_play = 22;};
+            if(gameRows[0][0] == 'O' && gameRows[1][1] == 'O' && gameRows[2][2] == 'O'){count_play = 22;};
+            if(gameRows[0][2] == 'O' && gameRows[1][1] == 'O' && gameRows[2][0] == 'O'){count_play = 22;};
         }while(count_play <= 9);
         board(gameRows);
         if(count_play == 10){
             printf("Jogo empatado \n");
         }
-        if(count_play == 11){
+        if(count_play == 20){
             printf("Vencedor X \n");
         }
-        if(count_play == 12){
+        if(count_play == 22){
             printf("Vencedor O \n");
         }    
         printf("Deseja jogar novamente? [S-N]\n");
         scanf("%s",&answer);
-    }while(answer == "S"); //criado o laço de repetição que continua jogando até que player responda algo diferente de S
+    }while(answer == 'S'); //criado o laço de repetição que continua jogando até que player responda algo diferente de S
 }

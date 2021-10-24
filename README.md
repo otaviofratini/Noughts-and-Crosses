@@ -1,5 +1,5 @@
 # Noughts and Crosses
- **_Projeto de jogo da velha._**
+ **_Projeto de jogo da velha em Command Line Interface._**
 
 
 ## Regras do jogo:
@@ -10,9 +10,15 @@
 - O jogo pode ter 3 resultados: vitória do jogador 1, vitória do jogador 2 ou empate;
 - Ganha o jogador que primeiro formar uma reta na diagonal, vertical ou horizontal do tabuleiro.
 
+## Instruções de jogo:
+- Os jogadores serão organizados da seguinte maneira:
+    - O jogador X vai sempre ter as rodadas com números pares.
+    - O jogador O vai sempre ter as rodadas com números ímpares.
+- O sistema irá solicitar ao usuário em cada jogada para inserir qual a linha e coluna do tabuleiro do jogo da velha.
+- O jogo termina quando alguém vence ou empata.
+- Ao final da jogada, será solicitado se deseja jogar novamente.
 
-
-To do:
+### To do:
 - [x] Criar uma matriz para representar o tabuleiro.
     - A Matriz deverá conter 9 posições, 3 linhas e 3 colunas
     - Deverá ser criado um tipo de interface gráfica para representar o tabuleiro
