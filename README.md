@@ -15,10 +15,12 @@
     - O jogador X vai sempre ter as rodadas com números pares.
     - O jogador O vai sempre ter as rodadas com números ímpares.
 - O sistema irá solicitar ao usuário em cada jogada para inserir qual a linha e coluna do tabuleiro do jogo da velha.
+
+![linhas-e-colunas](https://user-images.githubusercontent.com/67652202/138625652-25fa1783-a48b-4ad0-a200-127aa6b5cfaf.png)
 - O jogo termina quando alguém vence ou empata.
 - Ao final da jogada, será solicitado se deseja jogar novamente.
 
-### To do:
+### Done:
 - [x] Criar uma matriz para representar o tabuleiro.
     - A Matriz deverá conter 9 posições, 3 linhas e 3 colunas
     - Deverá ser criado um tipo de interface gráfica para representar o tabuleiro
