@@ -25,7 +25,7 @@
 - [x] Criar o jogador 1(X) e 2(O), e preparar de forma intuitiva cada tentativa de jogada deles.
     - O sistema deve gerenciar cada rodada até o final do jogo
     - Sempre que o jogo terminar, perguntar se quer iniciar o jogo novamente.
-- [ ] Adicionar validações para jogadas inválidas.
+- [x] Adicionar validações para jogadas inválidas.
     - Só permitir inserção de números.
     - Só pode escolher posições de 1 a 9 seguinte a numeração da linha e coluna conforme exibido no tabuleiro.
     - Só pode inserir uma jogada em uma posição que não estiver ocupada.

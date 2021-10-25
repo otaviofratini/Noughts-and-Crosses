@@ -29,20 +29,21 @@ int main(){
             }else{
                 printf("Jogador O\n"); // As jogadas ímpares são o jogador O
             }
+            fflush(stdin); // limpa o buffer e evita loop quando é digitado letras ao invés de números.
             printf("Digite a linha: ");
             scanf("%i",&l);
             printf("Digite a coluna: ");
             scanf("%i",&c);
             if(l < 1 || c < 1 || l > 3 || c > 3 ){   //validação para limitar a jogada do usuário para inserir somente a linha e a coluna que caiba na matriz do jogo
-                l = 0;
-                c = 0;
                 printf("Foi informada uma linha ou coluna inexistente\n");
                 system("pause");
-            }else if(gameRows[l-1][c-1] != ' '){ 
                 l = 0;
                 c = 0;
+            }else if(gameRows[l-1][c-1] != ' '){ 
                 printf("Casa ocupada\n");
                 system("pause");
+                l = 0;
+                c = 0;
             }else{
                 if(turn%2==0){
                     gameRows[l-1][c-1] = 'X'; 
